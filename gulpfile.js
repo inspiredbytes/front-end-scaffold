@@ -32,7 +32,8 @@ gulp.task('scripts', () => {
   const b = browserify({
     entries: 'app/scripts/main.js',
     transform: [babelify, debowerify],
-    debug: true
+    debug: true,
+    paths: ['./app/scripts']
   });
 
   return b.bundle()
