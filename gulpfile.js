@@ -37,7 +37,7 @@ gulp.task('scripts', () => {
   });
 
   return b.bundle()
-    .pipe(source('bundle.js'))
+    .pipe(source('application.js'))
     .pipe($.plumber())
     .pipe(buffer())
     .pipe($.sourcemaps.init({loadMaps: true}))
